@@ -400,3 +400,4 @@ FodyWeavers.xsd
 # Ignore the bin and obj folders
 bin/
 obj/
+appsettings.json
