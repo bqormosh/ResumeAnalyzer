@@ -1,0 +1,227 @@
+﻿/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, rgba(255, 230, 192, 0.4) 20%, transparent);
+    color: #2d2d2d; /* Neutral text color */
+}
+
+h1, h2, h3 {
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: #d97706; /* Accent color */
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #bf5f00;
+    }
+
+/* Modern Header Customization */
+header {
+    position: relative;
+    overflow: hidden;
+    background: #ffd38b;
+    border-radius: 12px 12px 12px 12px;
+}
+
+.custom-header-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 230, 192, 0.4) 20%, transparent);
+    z-index: 0;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1; /* Ensures text appears above overlay */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+}
+
+/* Main Container */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+    background: #d97706;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+    button:hover {
+        background: #bf5f00;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+/* Form Styling */
+form {
+    margin: 20px 0;
+}
+
+    form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #4a4a4a;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        color: #333;
+        background: #fafafa;
+        transition: border 0.3s ease;
+    }
+
+        form input:focus,
+        form textarea:focus {
+            border: 1px solid #d97706;
+            outline: none;
+            box-shadow: 0 0 8px rgba(217, 119, 6, 0.4);
+        }
+
+    form textarea {
+        resize: vertical;
+        min-height: 150px;
+    }
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+    table th,
+    table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    table th {
+        background: #ffd38b;
+        color: #4a4a4a;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    table tr:nth-child(even) {
+        background: #fafafa;
+    }
+
+    table tr:hover {
+        background: #f7f3ef;
+    }
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 25px 0;
+    background: #2d2d2d;
+    color: #ffffff;
+    font-size: 1rem;
+
+    position: relative;
+    overflow: hidden;
+}
+
+    footer::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    footer p {
+        position: relative;
+        z-index: 1;
+        font-weight: 400;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    table, form input, form textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
