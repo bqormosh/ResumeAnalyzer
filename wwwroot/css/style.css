@@ -29,8 +29,39 @@ a {
         color: #bf5f00;
     }
 
+
+header.top-header {
+    background: radial-gradient(circle at center, rgba(255, 230, 192, 0.4) 20%, transparent); /* Same background as the main header */
+    color: #2d2d2d; /* Same text color */
+    padding: 10px 20px !important;
+    display: flex !important;
+    justify-content: flex-end !important; /* Align buttons to the right */
+    align-items: center; /* Vertically center the buttons */
+    position: relative;
+}
+
+header.top-header .header-buttons a {
+    background: #fff;
+    color: #2d2d2d; /* Same text color */
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-left: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+header.top-header .header-buttons a:hover {
+    background: #bf5f00; /* Hover effect */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Modern Header Customization */
 header {
+    display:flex;
     position: relative;
     overflow: hidden;
     background: #ffd38b;
@@ -166,6 +197,14 @@ table {
         background: #f7f3ef;
     }
 
+.signup-btn {
+    background-color: #30495a;
+}
+
+.login-btn {
+    background-color: #30495a;
+}
+
 /* Footer */
 footer {
     margin-top: 30px;
@@ -174,7 +213,6 @@ footer {
     background: #2d2d2d;
     color: #ffffff;
     font-size: 1rem;
-
     position: relative;
     overflow: hidden;
 }

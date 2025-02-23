@@ -8,6 +8,20 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<AIService>();
 
 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "Cookies"; // Cookie-based auth
+    options.DefaultSignInScheme = "Cookies";
+    options.DefaultChallengeScheme = "Google"; // Trigger Google login
+})
+.AddCookie() // Enable cookie authentication
+.AddGoogle(options =>
+{
+    options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+    options.SignInScheme = "Cookies";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,6 +37,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

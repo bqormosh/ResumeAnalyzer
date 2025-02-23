@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="container text-center">
+    <h2>Welcome to AI Resume Analyzer</h2>
+    <p>Choose a method to sign up:</p>
+    <!-- Google Sign-In Button -->
+    <form asp-controller="Account" asp-action="GoogleLogin" method="post">
+        <button type="submit" class="btn btn-primary signup-btn">
+            <img src="~/img/Google__G__logo.svg" alt="Google Logo" style="width: 20px; height: 20px; margin-right: 8px;">
+            Continue with Google
+        </button>
+    </form>
+    <a href="#" class="btn btn-primary signup-btn">
+        <img src="~/img/Microsoft_logo.svg" alt="Microsoft Logo" style="width: 20px; height: 20px; margin-right: 8px;">
+        Continue with Microsoft
+    </a>
+</div>

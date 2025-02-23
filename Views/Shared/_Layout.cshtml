@@ -11,7 +11,14 @@
 
 </head>
 <body>
+    <header class="top-header bg-light">
+        <div class="header-buttons">
+            <a class="btn btn-light" href="@Url.Action("Login", "Account")">Login</a>
+            <a class="btn btn-light" href="@Url.Action("SignUp", "Account")">Sign Up</a>
+        </div>
+    </header>
     <header class="py-5 text-center position-relative bg-light">
+
         <div class="container">
             <h1 class="display-4 fw-bold text-dark">Welcome to Resume Analyzer</h1>
             <p class="lead text-secondary">Analyze resumes effortlessly with AI-powered insights</p>
